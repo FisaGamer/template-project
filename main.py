@@ -12,7 +12,7 @@ def loop_list(n: int, f: callable, *args) -> object:
     :rtype: list
     :param n: int
     :param f: callable
-    :param kwargs:
+    :param kwargs: args
     """
     [f(*args) for i in range(n)]
 
@@ -22,7 +22,7 @@ def loop(n: int, f: callable, *args) -> object:
     :rtype: list
     :param n: int
     :param f: callable
-    :param kwargs:
+    :param kwargs: args
     """
     for i in range(n):
         f(*args)
