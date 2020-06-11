@@ -7,7 +7,25 @@ import os
 import argparse
 
 
-def loop(n, f, *kwargs): [f(*kwargs) for i in range(n)]
+def loop_list(n: int, f: callable, *args) -> object:
+    """
+    :rtype: list
+    :param n: int
+    :param f: callable
+    :param kwargs:
+    """
+    [f(*args) for i in range(n)]
+
+
+def loop(n: int, f: callable, *args) -> object:
+    """
+    :rtype: list
+    :param n: int
+    :param f: callable
+    :param kwargs:
+    """
+    for i in range(n):
+        f(*args)
 
 
 def main():
