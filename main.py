@@ -32,5 +32,12 @@ def main():
     pass
 
 
+class CustomString(str):
+    def tolist(self):
+        return [self[i] for i in range(len(self))]
+
+
 if __name__ == '__main__':
     main()
+    moi = CustomString("coucou")
+    print(moi.tolist())
